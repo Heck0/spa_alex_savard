@@ -1,0 +1,85 @@
+@use '../styles/partials/theme';
+@use '../styles/partials/queries';
+@use '../styles/partials/mixins';
+
+$hero: "../assets/pexels-cottonbro-4038310.jpg";
+
+.hero {
+  position: relative;
+  &__image {
+    position: relative;
+
+    background-image: linear-gradient(
+        rgba(theme.$colorfulGreen, 0.5),
+        theme.$darkBackground
+      ),
+      url($hero);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    margin: 0 auto;
+
+    @include queries.smallScreen {
+      height: 600px;
+    }
+
+    @include queries.desktop {
+      height: 800px;
+    }
+
+    @include queries.bigScreen {
+      height: 1000px;
+      background-size: top;
+      @include mixins.containerMaxWidth;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    border-left: 6px solid theme.$colorfulGreen;
+    color: theme.$mainText;
+    padding: 1.3rem 0 1.3rem 1.5rem;
+
+    & h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    & span {
+      text-align: right;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .triangle {
+    display: none;
+    @include queries.bigScreen {
+      display: flex;
+      color: transparent;
+
+      &--left {
+        -webkit-text-stroke: 5px theme.$colorfulGreen;
+
+        position: absolute;
+        font-size: 400px;
+        top: 20rem;
+        left: 5%;
+        position: absolute;
+        transform: rotate(-40deg);
+      }
+      &--right {
+        -webkit-text-stroke: 3px theme.$darkBackground;
+        bottom: 12rem;
+        right: 0;
+        font-size: 200px;
+        position: absolute;
+        transform: rotate(30deg);
+      }
+    }
+  }
+}
