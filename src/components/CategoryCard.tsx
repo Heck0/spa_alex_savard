@@ -10,8 +10,6 @@ enum favorites {
 }
 
 const CategoryCard = ({ id, name, icon }: CategoryTypes) => {
-  console.log(id);
-
   const isMyFavorite: boolean =
     id.includes(favorites.INDIE) ||
     id.includes(favorites.FOLK) ||
