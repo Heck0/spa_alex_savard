@@ -7,7 +7,7 @@ const Header = (): JSX.Element => {
   const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
 
   return (
-    <div className={`header ${showMobileMenu && "header--column"}`}>
+    <div className={`header ${showMobileMenu ? "header--column" : undefined}`}>
       <a href="/">
         <div className="header__logo"></div>
       </a>

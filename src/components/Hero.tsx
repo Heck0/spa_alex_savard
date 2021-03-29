@@ -1,17 +1,17 @@
 import "../styles/hero.scss";
 const Hero = () => {
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="triangle triangle--left">&#9650;</div>
       <div className="triangle triangle--right">&#9650;</div>
 
       <div className="hero__image">
         <div className="hero__text">
-          <h1>Projet Mock up </h1>
-          <span>Je suis un span templateeee</span>
+          <h1>Projet API Spotify</h1>
+          <span>Test pour projet futur</span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

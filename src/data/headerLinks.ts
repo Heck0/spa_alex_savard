@@ -5,12 +5,12 @@ export interface linkType {
 
 const links: linkType[] = [
   {
-    path: "/accueil",
+    path: "#",
     title: "Accueil",
   },
   {
-    path: "/inspirations",
-    title: "Inspirations",
+    path: "#spotify",
+    title: "Spotify",
   },
 ];
 

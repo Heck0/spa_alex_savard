@@ -6,9 +6,9 @@ $hero: "../assets/pexels-cottonbro-4038310.jpg";
 
 .hero {
   position: relative;
+  height: 100%;
   &__image {
     position: relative;
-
     background-image: linear-gradient(
         rgba(theme.$colorfulGreen, 0.5),
         theme.$darkBackground
