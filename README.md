@@ -1,1 +1,1 @@
-Petit SPA afin d'utiliser de tester l'API Spotify
+Petit SPA afin de tester l'API Spotify
