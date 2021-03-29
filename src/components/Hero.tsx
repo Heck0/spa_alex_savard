@@ -7,8 +7,8 @@ const Hero = () => {
 
       <div className="hero__image">
         <div className="hero__text">
-          <h1>Projet Mock up </h1>
-          <span>Je suis un span templateeee</span>
+          <h1>Projet API Spotify</h1>
+          <span>Test pour projet futur</span>
         </div>
       </div>
     </section>

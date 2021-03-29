@@ -20,11 +20,9 @@ const getToken = async (): Promise<any> => {
 };
 
 const getRandomCategories = async (token: string): Promise<any> => {
-  const limit: number = 6;
-  const offset: number = Math.floor(Math.random() * 30);
-
+  const offset = Math.floor(Math.random() * 30);
   const res = await fetch(
-    `	https://api.spotify.com/v1/browse/categories?limit=${limit}&offset=${offset}`,
+    `	https://api.spotify.com/v1/browse/categories?country=CA&offset=${offset}`,
     {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
@@ -36,23 +34,10 @@ const getRandomCategories = async (token: string): Promise<any> => {
   } = await res.json();
 
   const parsedCategories: Category[] = items.map(
-    ({
-      href,
-      id,
-      name,
-      icons,
-    }: {
-      href: string;
-      id: string;
-      name: string;
-      icons: any;
-    }) => {
-      const [width, height]: [number, number] = [
-        icons[0].width,
-        icons[0].height,
-      ];
+    ({ id, name, icons }: { id: string; name: string; icons: any }) => {
+      const image: string = icons[0].url;
 
-      return new Category(id, name, href, width, height);
+      return new Category(id, name, image);
     }
   );
 

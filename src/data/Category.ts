@@ -1,22 +1,18 @@
-export default class Category {
+interface CategoryTypes {
   id: string;
   name: string;
   icon: string;
-  height?: number;
-  width?: number;
+}
 
-  constructor(
-    id: string,
-    name: string,
-    icon: string,
-    height?: number,
-    width?: number
-  ) {
+export default class Category implements CategoryTypes {
+  id: string;
+  name: string;
+  icon: string;
+
+  constructor(id: string, name: string, icon: string) {
     this.id = id;
     this.name = name;
     this.icon = icon;
-    this.height = height;
-    this.width = width;
   }
 
   get categoryId(): string {
@@ -28,10 +24,6 @@ export default class Category {
   get categoryIcon(): string {
     return this.icon;
   }
-  get categoryWidth(): number | undefined {
-    return this.width ? this.width : undefined;
-  }
-  get categoryHeight(): number | undefined {
-    return this.height ? this.height : undefined;
-  }
 }
+
+export type { CategoryTypes };

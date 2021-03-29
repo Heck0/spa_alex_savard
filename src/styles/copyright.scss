@@ -1,0 +1,14 @@
+@use '../styles/partials/theme';
+
+.footer {
+  height: 8rem;
+  background-color: theme.$darkBackground;
+  color: theme.$mainText;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  &__copyright {
+    margin-bottom: 1rem;
+  }
+}

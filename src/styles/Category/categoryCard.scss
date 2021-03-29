@@ -1,0 +1,55 @@
+@use '../../styles/partials/theme';
+@use '../../styles/partials/queries';
+@use '../../styles/partials/mixins';
+
+.card {
+  margin-bottom: 1.5rem;
+
+  .img--container {
+    position: relative;
+    overflow: hidden;
+
+    @include queries.smallScreen {
+      &:hover {
+        .card__title {
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    color: theme.$colorfulGreen;
+    cursor: default;
+  }
+
+  h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: theme.$colorfulGreen;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  @include queries.smallScreen {
+    &__title {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateX(-100%);
+      background-color: rgba(theme.$darkBackground, 0.7);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+}
