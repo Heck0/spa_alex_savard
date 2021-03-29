@@ -1,7 +1,7 @@
 import "../styles/hero.scss";
 const Hero = () => {
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="triangle triangle--left">&#9650;</div>
       <div className="triangle triangle--right">&#9650;</div>
 
@@ -11,7 +11,7 @@ const Hero = () => {
           <span>Je suis un span templateeee</span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

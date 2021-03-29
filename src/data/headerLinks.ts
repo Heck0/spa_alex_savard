@@ -9,8 +9,8 @@ const links: linkType[] = [
     title: "Accueil",
   },
   {
-    path: "/inspirations",
-    title: "Inspirations",
+    path: "/categories",
+    title: "Categories",
   },
 ];
 
